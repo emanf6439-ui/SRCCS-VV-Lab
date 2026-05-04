@@ -1,0 +1,22 @@
+[STATE] ::= Idle | Approaching | Closed | Emergency
+[BAR] ::= Open | Closed
+
+BarrierSystem
+-------------------------
+Barrier : BAR
+TrainDetected : BOOL
+SystemState : STATE
+
+InitBarrierSystem
+-------------------------
+BarrierSystem
+-------------------------
+Barrier = Open
+TrainDetected = False
+SystemState = Idle
+
+Safety
+-------------------------
+BarrierSystem
+-------------------------
+TrainDetected = True ⇒ Barrier = Closed
